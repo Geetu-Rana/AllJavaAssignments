@@ -1,0 +1,44 @@
+
+final keyword used to make method or variable as final value. means you can 
+change it after assigning.
+
+
+public class Final {
+
+	//this keyword is use for to make the variable and method 
+	//immutable means we can't change/modify 
+	//their value in the other class.
+	final int age = 10;
+	
+	public static void main(String[] args) {
+		
+		Final fin = new Final();
+		//fin.age = 12;//here we can't modify;
+	}
+}
+
+where finally keyword is used execute the program irrespective of try catch. you have to code them in 
+finally block and after return statement you can also access the coe in finnaly and it only does not work when you forcfully 
+exit from your program.
+
+public class Finally {
+
+	//this keyword is use for  irrespective of try ans catch if we want to execute some 
+	//code then we can use finally block.
+	//it is block used with try and catch block.
+	public static void main(String[] args) {
+		System.out.println("Mian starts here");
+		try{
+			System.out.println("Try Starts ...");
+			System.out.println(100/10);
+			System.out.println("Try ends.");
+		}
+		catch(Exception e)
+		{
+			System.out.println("inside catch");
+		}
+		finally{
+			System.out.println("Finally block");
+		}
+	}
+}

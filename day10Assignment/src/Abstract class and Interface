@@ -1,0 +1,80 @@
+A class that is declared as abstract is known as abstract class. It can have abstract and non abstract methods. 
+It Need to be extended and its method implemented by child class and cannot be instantiated.
+abstract class must be declared with n abstract keyword. it can have adstract and non abstract methods. it can not bee instantiated(object creation).
+it can have constructors and static method also. 
+
+public abstract class student{
+	
+	int name;
+	
+	abstract void science();
+	
+	}
+public class ScienceStudent extends(){
+
+	@Overrde 
+	public int science(){
+	System.out.println("hello Science")
+	}
+}
+public class Main{
+
+	public Static void main(String[] args){
+	
+	ScienceStudent s1 = new ScienceStudent();
+	s1.science();//hello Science
+	
+	}
+	
+	
+	
+	InterFace :- 
+	
+	In order to attain the abstraction we use interface. 
+	Interface in java is defined as a abstract type used to specify the behaviour of a class and interface is a blueprint of a class.
+	 A java interface face contains static constants and abstract methods 
+	Java interface also represent the IS-A relationship.
+	It can not be instantiated just like abstract class.
+	It is used to achieve total abstraction.
+	Since java does not support multiple inheritence in the case of class, by using an interface it can achive multiple inheritance.
+	it also used to achve loose coupling.
+	
+	//Printer.java
+public interface Printer{
+	int number=10;
+	void print();
+}
+
+public interface Printer{
+
+	public static final int number=10;
+	public abstract void print();
+}
+
+public class ConsolePrinter implements Printer{
+	public void print(){
+	System.out.println("Printing on the console.");
+}
+}
+
+public class FilePrinter implements Printer{
+	public void print(){
+	System.out.println("Printing on the File.");
+}
+}
+//Main.java
+`public class Main{
+
+public static void main(String args[]){
+		ConsolePrinter cp = new ConsolePrinter();
+	
+		Printer p1 = new ConsolePrinter();
+		
+		Printer p2 = new FilePrinter();
+	
+		cp.print();
+		p1.print();
+		p2.print();
+	}
+}
+	
